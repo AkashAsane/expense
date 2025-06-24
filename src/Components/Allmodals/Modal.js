@@ -110,7 +110,7 @@ function Expensemodal({
           </div>
           <div className="expsnsebuttons">
             <button className="button1" type="submit">
-              + Add Expenses
+              + Add Expense
             </button>
             <button
               className="button2"
