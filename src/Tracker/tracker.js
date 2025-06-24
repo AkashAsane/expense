@@ -113,7 +113,7 @@ function Expense() {
             <div className="wallet2">
               <h3>Expenses: ₹{totalExpense} </h3>
               <button type="button" className="walletbutton2" onClick={() => setOpenExpense(true)}>
-                +Add Expenses
+                + Add Expense
               </button>
 
               {openExpense && (
