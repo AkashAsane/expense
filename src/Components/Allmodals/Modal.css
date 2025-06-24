@@ -72,7 +72,6 @@
 
 }
 
-/* expsnsemodalcss__ */
 .expensebackground{
     width: 100vw;
     height: 100vh;
@@ -194,6 +193,7 @@
 
     .button1 .button2{
         cursor: pointer;
+        padding:8px
     }
 
 
