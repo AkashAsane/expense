@@ -106,41 +106,41 @@
     align-items: center;
     justify-content: center;
     margin: 10px;
+    
+   
   }
-
-  .title1 {
-    font-size: 24px;
-    text-align: center;
-  }
+  
 
   .section1 {
-    width: 95%; 
-    flex-direction: column;
-    margin: 10px auto;
-    padding: 15px;
+    width: 270px; 
+    height: auto; 
+    margin-top: 20px; 
+    
   }
 
   .expenses {
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    width: 200px;
+    margin: 35px;
   }
 
-  .wallet1, .wallet2 {
-    width: 90%;
-    margin: 10px auto;
+  .wallet1,
+  .wallet2 {
+    width: 100%; 
+    margin-top: 0;
   }
 
-  .chart {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    margin: 15px auto;
+  .wallet1 h3,
+  .wallet2 h3 {
+    margin-top: 20px;
   }
 
-  .tar {
-    width: 95%;
-    margin: 20px auto;
+
+  .walletbuttons {
+    margin-top: 0px;
   }
 }
 
