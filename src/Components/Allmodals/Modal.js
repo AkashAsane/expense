@@ -110,9 +110,8 @@ function Expensemodal({
           </div>
           <div className="expsnsebuttons">
             <button className="button1" type="submit">
-             + Add Expenses
+              + Add Expenses
             </button>
-
             <button
               className="button2"
               type="button"
@@ -126,5 +125,6 @@ function Expensemodal({
     </div>
   );
 }
+
 
 export { Modal, Expensemodal };
