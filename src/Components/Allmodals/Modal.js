@@ -101,6 +101,7 @@ function Expensemodal({
               <MenuItem value="movie">Movie</MenuItem>
               <MenuItem value="shopping">Shopping</MenuItem>
             </Select>
+
             <input
               type="date"
               name="date"
@@ -126,6 +127,5 @@ function Expensemodal({
     </div>
   );
 }
-
 
 export { Modal, Expensemodal };
