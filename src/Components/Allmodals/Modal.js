@@ -78,7 +78,7 @@ function Expensemodal({ closeexpense,addExpense, setExpenseAmount, setExpensePri
               />
             </div>
             <div className="expsnsebuttons">
-              <button className="button1" type="submit"> + Add Expenses</button>
+              <button className="button1" type="submit"> Add Expenses</button>
               <button className="exbutton2" type="button" onClick={() => closeexpense(false)}>
                 Cancel
               </button>

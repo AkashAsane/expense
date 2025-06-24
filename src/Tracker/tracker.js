@@ -105,7 +105,7 @@ function Expense() {
                   setOpenBalance(true);
                 }}
               >
-                +Add Income
+                + Add Income
               </button>
               {openBalance && <Modal closebalance={setOpenBalance} addBalance={addBalance} />}
             </div>
