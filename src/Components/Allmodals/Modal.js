@@ -112,6 +112,7 @@ function Expensemodal({
             <button className="button1" type="submit">
              + Add Expenses
             </button>
+
             <button
               className="button2"
               type="button"
