@@ -137,7 +137,7 @@ function Transaction({ expenses, handleDeleteExpense, handleSaveExpense }) {
         </div>
 
         <div className="topExpenses">
-          <h1 className="norectext">Top Expenses</h1>
+          <h2 className="norectext">Top Expenses</h2>
           <div className="topdiv">
           {Object.entries(categoryTotals).length > 0 ? (
               Object.entries(categoryTotals).map(([category, total]) => (
