@@ -11,26 +11,26 @@
 }
 
 .section1 {
-  width: 100%; /* Updated to ensure responsiveness */
+  width: 100%; 
   max-width: 1400px;
-  height: auto; /* Allow height to adjust */
-  padding: 20px; /* Add padding for spacing */
+  height: auto; 
+  padding: 20px; 
   border: 1px solid black;
   background: rgba(98, 98, 98, 1);
   border-radius: 10px;
-  display: flex; /* Ensures proper alignment */
+  display: flex; 
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 0 auto; /* Center content */
+  margin: 0 auto; 
 }
 
 .wallet1, .wallet2 {
   text-align: center;
-  width: 30%; /* Adjust for dynamic width */
+  width: 30%; 
   max-width: 355px;
   height: 200px;
   background: rgba(155, 155, 155, 1);
-  margin-top: 20px; /* Reduce margin for mobile */
+  margin-top: 20px; 
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -61,7 +61,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 100%; /* Ensure it spans the section */
+  width: 100%; 
   margin-top: 20px;
 }
 
@@ -97,7 +97,7 @@
   }
 
   .section1 {
-    width: 90%; /* Adjust width to take up screen space */
+    width: 90%; 
     height: auto;
     padding: 10px;
     flex-direction: column;
@@ -120,12 +120,12 @@
   }
 
   .chart {
-    height: auto; /* Adjust for varying screen sizes */
+    height: auto; 
     margin-top: 15px;
   }
 
   .tar {
-    width: 95%; /* Ensure responsiveness */
+    width: 95%; 
     margin: 20px auto;
   }
 }
