@@ -92,7 +92,7 @@ function Expensemodal({
             <Select
               placeholder="Select Category"
               className="expsensetxt"
-              name="cetegory"
+              name="category"
               onChange={(e) => setExpenseCategory(e.target.value)}
               required
             >
