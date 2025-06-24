@@ -1,5 +1,5 @@
-.wrapper1 {
-  margin-left: 35px;
+.wrapper1{
+  margin-left:35px;
 }
 .title1 {
   color: rgba(255, 255, 255, 1);
@@ -7,80 +7,97 @@
   font-size: 32px;
   font-weight: 700;
   line-height: 36.77px;
-  text-align: center;
 }
 
 .section1 {
-  width: 100%; 
-  max-width: 1400px;
-  height: auto; 
-  padding: 20px; 
+  width: 1400px;
+  height: 350px;
+  top: 94px;
+  gap: 0px;
   border: 1px solid black;
-  background: rgba(98, 98, 98, 1);
+ 
+  background:rgba(98, 98, 98, 1);
   border-radius: 10px;
-  display: flex; 
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 0 auto; 
 }
 
-.wallet1, .wallet2 {
+
+.wallet1 {
   text-align: center;
-  width: 30%; 
-  max-width: 355px;
+  width: 355px;
   height: 200px;
   background: rgba(155, 155, 155, 1);
-  margin-top: 20px; 
+  margin-top: 40px;
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+.wallet1 h3{
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+    margin-top: 50px;
 }
 
-.wallet1 h3, .wallet2 h3 {
-  font-weight: 700;
-  font-size: 24px;
-  color: white;
-  margin-bottom: 10px;
+.walletbuttons1{
+    background-color: rgba(181, 220, 82, 1);
+    border: none;
+    height: 40px;
+    width: 130px;
+    color: white;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-.walletbuttons1, .walletbutton2 {
-  background: linear-gradient(90deg, #FF9595 0%, #FF4747 80%, #FF3838 100%);
-  border: none;
-  height: 40px;
-  width: 130px;
-  color: white;
-  font-size: 15px;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-top: 10px;
+.wallet2 {
+    text-align: center;
+    width: 355px;
+    height: 200px;
+    background: rgba(155, 155, 155, 1);
+    margin-top: 40px;
+    border-radius: 10px;
+  }
+  .wallet2 h3{
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+    margin-top: 50px;
 }
 
-.expenses {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%; 
-  margin-top: 20px;
+.walletbutton2{
+    background: linear-gradient(90deg, #FF9595 0%, #FF4747 80%, #FF3838 100%);
+    border: none;
+    height: 40px;
+    width: 130px;
+    color: white;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-.chart {
-  width: 100%;
-  max-width: 355px;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.expenses{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.chart{
+    width: 355px;
+    height: 300px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;  
+    margin-top: 30px;
+
+}
+
+.tar{
+  width:1350px;
   margin-top: 30px;
-}
-
-.tar {
-  width: 100%;
-  max-width: 1350px;
-  margin: 30px auto 0;
+  margin-left: 35px;
   height: auto;
 }
+
+
 
 @media only screen and (max-width: 768px) {
   .wrapper1 {
@@ -93,14 +110,14 @@
 
   .title1 {
     font-size: 24px;
-    line-height: 28px;
+    text-align: center;
   }
 
   .section1 {
-    width: 90%; 
-    height: auto;
-    padding: 10px;
+    width: 95%; 
     flex-direction: column;
+    margin: 10px auto;
+    padding: 15px;
   }
 
   .expenses {
@@ -110,22 +127,21 @@
   }
 
   .wallet1, .wallet2 {
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .wallet1 h3, .wallet2 h3 {
-    margin-top: 10px;
-    font-size: 20px;
+    width: 90%;
+    margin: 10px auto;
   }
 
   .chart {
-    height: auto; 
-    margin-top: 15px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 15px auto;
   }
 
   .tar {
-    width: 95%; 
+    width: 95%;
     margin: 20px auto;
   }
 }
+
+
