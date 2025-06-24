@@ -67,7 +67,7 @@ function Expensemodal({
     <div className="expensebackground">
       <div className="expensecontainer">
         <div className="expensetitle">
-          <h2>Add Expenses</h2>
+          <h2> + Add Expense</h2>
         </div>
         <form onSubmit={handleSubmit} className="expensebody">
           <div className="inputrows">
