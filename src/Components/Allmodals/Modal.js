@@ -36,7 +36,11 @@ function Modal({ closebalance, addBalance }) {
             <button type="submit" className="button1">
               Add Balance
             </button>
-            <button className="button2" type="button" onClick={() => closebalance(false)}>
+            <button
+              className="button2"
+              type="button"
+              onClick={() => closebalance(false)}
+            >
               Cancel
             </button>
           </div>
@@ -69,15 +73,17 @@ function Expensemodal({
           <div className="inputrows">
             <input
               type="text"
+              name="title"
               required
-              placeholder="Title"
+              placeholder="Expense Title"
               className="expsensetxt"
               onChange={(e) => setExpenseAmount(e.target.value)}
             />
             <input
               type="number"
+              name="price"
               required
-              placeholder="Price"
+              placeholder="Expense Price"
               className="expsensetxt"
               onChange={(e) => setExpensePrice(e.target.value)}
             />
@@ -96,6 +102,7 @@ function Expensemodal({
             </Select>
             <input
               type="date"
+              name="date"
               required
               className="expsensetxt"
               onChange={(e) => setExpenseDate(e.target.value)}
@@ -105,7 +112,11 @@ function Expensemodal({
             <button className="button1" type="submit">
               Add Expenses
             </button>
-            <button className="button2" type="button" onClick={() => closeexpense(false)}>
+            <button
+              className="button2"
+              type="button"
+              onClick={() => closeexpense(false)}
+            >
               Cancel
             </button>
           </div>
@@ -114,6 +125,5 @@ function Expensemodal({
     </div>
   );
 }
-
 
 export { Modal, Expensemodal };
