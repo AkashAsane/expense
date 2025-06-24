@@ -1,0 +1,147 @@
+.wrapper1{
+  margin-left:35px;
+}
+.title1 {
+  color: rgba(255, 255, 255, 1);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 36.77px;
+}
+
+.section1 {
+  width: 1400px;
+  height: 350px;
+  top: 94px;
+  gap: 0px;
+  border: 1px solid black;
+ 
+  background:rgba(98, 98, 98, 1);
+  border-radius: 10px;
+}
+
+
+.wallet1 {
+  text-align: center;
+  width: 355px;
+  height: 200px;
+  background: rgba(155, 155, 155, 1);
+  margin-top: 40px;
+  border-radius: 10px;
+}
+.wallet1 h3{
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+    margin-top: 50px;
+}
+
+.walletbuttons1{
+    background-color: rgba(181, 220, 82, 1);
+    border: none;
+    height: 40px;
+    width: 130px;
+    color: white;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.wallet2 {
+    text-align: center;
+    width: 355px;
+    height: 200px;
+    background: rgba(155, 155, 155, 1);
+    margin-top: 40px;
+    border-radius: 10px;
+  }
+  .wallet2 h3{
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+    margin-top: 50px;
+}
+
+.walletbutton2{
+    background: linear-gradient(90deg, #FF9595 0%, #FF4747 80%, #FF3838 100%);
+    border: none;
+    height: 40px;
+    width: 130px;
+    color: white;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.expenses{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.chart{
+    width: 355px;
+    height: 300px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;  
+    margin-top: 30px;
+
+}
+
+.tar{
+  width:1350px;
+  margin-top: 30px;
+  margin-left: 35px;
+  height: auto;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .wrapper1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    
+   
+  }
+  
+
+  .section1 {
+    width: 270px; 
+    height: auto; 
+    margin-top: 20px; 
+    
+  }
+
+  .expenses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 200px;
+    margin: 35px;
+  }
+
+  .wallet1,
+  .wallet2 {
+    width: 100%; 
+    margin-top: 0;
+  }
+
+  .wallet1 h3,
+  .wallet2 h3 {
+    margin-top: 20px;
+  }
+
+
+  .walletbuttons {
+    margin-top: 0px;
+  }
+}
+
+

@@ -1,0 +1,177 @@
+.Transactionsbody{
+    /* border: 2px solid red; */
+    height:400px;
+    
+}
+
+.bodycontainer{
+     
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.recentTransaction{
+ 
+    height: 380px;
+    width: 800px;
+ 
+   /* border: 2px solid red;  */
+} 
+
+.topExpenses{
+    height: 330px;
+    width: 500px;
+   
+    
+}
+
+.transactionrecords{
+     background-color: rgba(255, 255, 255, 1);
+     height: 325px;
+     border: none; 
+     border-radius: 10px;
+}
+
+ .tratxt{
+  font-family: "Ubuntu";
+  font-style: italic;
+  color: white;
+  font-weight: 700;
+  line-height: 32.17px;
+} 
+
+.setrecords{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid gray;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 80px;
+    
+}
+
+.setimg {
+    height: 50px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(217, 217, 217, 1);
+    border-radius: 30px;
+    margin-left: 20px;
+    
+}
+
+.setimg p{
+    margin-right: 12px;
+    padding: 0;
+}
+
+.set1{
+    margin-left:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 380px;
+
+    
+}
+
+.set2{
+    margin-left: 400px;
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    justify-content: space-evenly;
+  
+}
+
+.amount{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 5px;   
+    margin-left: 10px;
+}
+
+
+.date{
+   margin-left: 10px;
+   color: rgba(155, 155, 155, 1);
+   font-weight: 400;
+   font-size: 16px;
+
+}
+
+.cancel, .edit{
+    cursor: pointer; 
+    
+}
+
+.pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.page{
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: rgba(67, 150, 123, 1);
+    width: 37px;
+    text-align: center;
+    height: 37px;
+    border-radius: 10px;
+    color: white;
+    font-size: 30px;
+}
+
+.norecords{
+    background-color: rgba(255, 255, 255, 1);
+    height: 300px;
+    border: none; 
+    border-radius: 10px;
+    display: flex;flex-direction: row;
+    align-items:center ;
+    justify-content: center;
+}
+
+.pagination button{
+    border:none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.norectext{
+    font-family: "Ubuntu";
+    font-style: italic;
+    color: white;
+    font-weight: 700;
+    line-height: 32.17px;
+}
+
+.topdiv{
+   
+    height:auto;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 15px;
+}
+
+.empty-box{
+    background-color: rgba(255, 255, 255, 1);
+    height: 100px;
+    border: none; 
+    border-radius: 10px;
+    display: flex;flex-direction: row;
+    align-items:center ;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 700;
+}
