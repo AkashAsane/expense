@@ -6,7 +6,7 @@ import {
   ShoppingBasket,
 } from "@mui/icons-material";
 import React, { useState, useEffect } from "react";
-import { Select, MenuItem } from "@mui/material";
+import { Select, MenuItem, FormControl, InputLabel } from "@mui/material";
 
 function EditModal({ closeEditModal, expense, handleSave }) {
   const [amount, setAmount] = useState(expense?.amount || "");
@@ -53,25 +53,33 @@ function EditModal({ closeEditModal, expense, handleSave }) {
           </div>
 
           <div className="inputrows">
-            <Select
-              name="category"
-              className="expsensetxt"
-              value={category}
-              onChange={(e) => setCategory(e.target.value)}
-            >
-              <MenuItem value="food">
-                <Fastfood className="menuitemIcon" /> Food
-              </MenuItem>
-              <MenuItem value="travel">
-                <Flight className="menuitemIcon" /> Travel
-              </MenuItem>
-              <MenuItem value="movie">
-                <LocalMovies className="menuitemIcon" /> Movie
-              </MenuItem>
-              <MenuItem value="shopping">
-                <ShoppingBasket className="menuitemIcon" /> Shopping
-              </MenuItem>
-            </Select>
+            <FormControl className="expsensetxt" fullWidth>
+              <InputLabel id="category-label">Category</InputLabel>
+              <Select
+                id="category"
+                name="category"
+                value={category}
+                onChange={(e) => setCategory(e.target.value)}
+                label="Category"
+              >
+                <MenuItem value="" disabled>
+                  Select Category
+                </MenuItem>
+                <MenuItem value="food">
+                  <Fastfood className="menuitemIcon" /> Food
+                </MenuItem>
+                <MenuItem value="travel">
+                  <Flight className="menuitemIcon" /> Travel
+                </MenuItem>
+                <MenuItem value="movie">
+                  <LocalMovies className="menuitemIcon" /> Movie
+                </MenuItem>
+                <MenuItem value="shopping">
+                  <ShoppingBasket className="menuitemIcon" /> Shopping
+                </MenuItem>
+              </Select>
+            </FormControl>
+
             <input
               type="text"
               placeholder="dd/mm/yy"

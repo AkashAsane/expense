@@ -72,6 +72,7 @@
 
 }
 
+/* expsnsemodalcss__ */
 .expensebackground{
     width: 100vw;
     height: 100vh;
@@ -90,7 +91,7 @@
 .expensecontainer{
     width: 450px;
     height:300px;
-   
+    background-color: rgba(239, 239, 239, 0.85);
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
    
@@ -193,7 +194,6 @@
 
     .button1 .button2{
         cursor: pointer;
-        padding:8px
     }
 
 
