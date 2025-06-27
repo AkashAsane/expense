@@ -1,7 +1,5 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Select, MenuItem } from "@mui/material";
-
 import "./Modal.css";
 
 function Modal({ closebalance, addBalance }) {
@@ -58,9 +56,20 @@ function Expensemodal({
   setExpenseCategory,
   setExpenseDate,
 }) {
+  const [category, setCategory] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!category) {
+      alert("Please select a category.");
+      return;
+    }
     addExpense();
+  };
+
+  const handleCategoryChange = (value) => {
+    setCategory(value);
+    setExpenseCategory(value);
   };
 
   return (
@@ -90,12 +99,15 @@ function Expensemodal({
           </div>
           <div className="inputrows">
             <Select
-              placeholder="Select Category"
+              value={category}
+              onChange={(e) => handleCategoryChange(e.target.value)}
+              displayEmpty
               className="expsensetxt"
-              name="category"
-              onChange={(e) => setExpenseCategory(e.target.value)}
               required
             >
+              <MenuItem value="" disabled>
+                Select Category
+              </MenuItem>
               <MenuItem value="food">Food</MenuItem>
               <MenuItem value="travel">Travel</MenuItem>
               <MenuItem value="movie">Movie</MenuItem>
