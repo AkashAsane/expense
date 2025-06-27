@@ -36,7 +36,7 @@ function Expense() {
     }
 
     const newExpense = {
-      amount: capitalizeEachWord(expenseAmount), 
+      title: capitalizeEachWord(expenseAmount), 
       price: expensePrice,
       category: expenseCategory,
       date: expenseDate,
@@ -62,7 +62,7 @@ function Expense() {
     const updatedExpenses = expenses.map((expense, index) =>
       index === editedExpense.index
         ? {
-            amount: capitalizeEachWord(editedExpense.amount), 
+            title: capitalizeEachWord(editedExpense.amount), 
             price: editedExpense.price,
             category: editedExpense.category,
             date: editedExpense.date,
