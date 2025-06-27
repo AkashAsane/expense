@@ -74,6 +74,9 @@ function EditModal({ closeEditModal, expense, handleSave }) {
               <MenuItem value="shopping">
                 <ShoppingBasket className="menuitemIcon" /> Shopping
               </MenuItem>
+              <MenuItem value="entertainment">
+                <ShoppingBasket className="menuitemIcon" /> Entertainment
+              </MenuItem>
             </Select>
 
             <input

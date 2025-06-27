@@ -112,6 +112,7 @@ function Expensemodal({
               <option value="travel">Travel</option>
               <option value="movie">Movie</option>
               <option value="shopping">Shopping</option>
+              <option value="entertainment">Entertainment</option>
             </select>
 
             <input
