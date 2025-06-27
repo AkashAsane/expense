@@ -67,11 +67,8 @@ function Transaction({ expenses, handleDeleteExpense, handleSaveExpense }) {
     return acc;
   }, {});
 
-const capitalizeFirstLetter = (string) => {
-  return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
-};
 
-
+  
   return (
     <div className="Transactionsbody">
       <div className="bodycontainer">
@@ -85,10 +82,9 @@ const capitalizeFirstLetter = (string) => {
                     <p>{getCategoryIcon(expense.category)}</p>
                   </div>
                   <div className="set1">
-  <h3>{capitalizeFirstLetter(expense.amount)}</h3>
-  <p>{formatDate(expense.date)}</p>
-</div>
-
+                    <div className="amount">{expense.amount}</div>
+                    <div className="date">{formatDate(expense.date)}</div>
+                  </div>
                   <div className="set2">
                     <p
                       style={{
