@@ -59,7 +59,7 @@ function EditModal({ closeEditModal, expense, handleSave }) {
               value={category}
               onChange={(e) => setCategory(e.target.value)}
             >
-              <MenuItem value="category" disabled>
+              <MenuItem value="" disabled>
                 Category
               </MenuItem>
               <MenuItem value="food">

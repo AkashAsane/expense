@@ -9,6 +9,7 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaArrowRightLong, FaArrowLeftLong } from "react-icons/fa6";
 import { EditModal } from "../Allmodals/EditModal";
 import CategoryBarChart from "../Charts/Barchart";
+
 function Transaction({ expenses, handleDeleteExpense, handleSaveExpense }) {
   const [page, setPage] = useState(1);
   const [openEdit, setOpenEdit] = useState(false);
@@ -90,21 +91,14 @@ function Transaction({ expenses, handleDeleteExpense, handleSaveExpense }) {
                         fontWeight: "700",
                       }}
                     >{`₹${expense.price}`}</p>
-
                     <button
-                      style={{
-                        border: "none",
-                        backgroundColor: "rgba(255, 255, 255, 1)",
-                      }}
+                      style={{ border: "none", backgroundColor: "rgba(255, 255, 255, 1)" }}
                       onClick={() => handleDeleteExpense(startIndex + index)}
                     >
                       <MdCancel className="cancel" style={{ fontSize: "40px" }} />
                     </button>
                     <button
-                      style={{
-                        border: "none",
-                        backgroundColor: "rgba(255, 255, 255, 1)",
-                      }}
+                      style={{ border: "none", backgroundColor: "rgba(255, 255, 255, 1)" }}
                       onClick={() => handleEditExpense(expense, index)}
                     >
                       <FiEdit className="edit" style={{ fontSize: "40px" }} />
@@ -131,7 +125,7 @@ function Transaction({ expenses, handleDeleteExpense, handleSaveExpense }) {
             </div>
           ) : (
             <div className="norecords">
-              <h2 >No Transaction Records</h2>
+              <h2>No Transaction Records</h2>
             </div>
           )}
         </div>
@@ -139,12 +133,12 @@ function Transaction({ expenses, handleDeleteExpense, handleSaveExpense }) {
         <div className="topExpenses">
           <h2 className="norectext">Top Expenses</h2>
           <div className="topdiv">
-          {Object.entries(categoryTotals).length > 0 ? (
+            {Object.entries(categoryTotals).length > 0 ? (
               Object.entries(categoryTotals).map(([category, total]) => (
                 <CategoryBarChart key={category} category={category} amount={total} />
               ))
             ) : (
-              <div className="empty-box">No Expenses Record</div> 
+              <div className="empty-box">No Expenses Record</div>
             )}
           </div>
         </div>
