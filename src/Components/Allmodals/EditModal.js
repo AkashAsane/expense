@@ -53,22 +53,31 @@ function EditModal({ closeEditModal, expense, handleSave }) {
           </div>
 
           <div className="inputrows">
-           <Select
-  value={category}
-  onChange={(e) => setCategory(e.target.value)}
-  displayEmpty
-  className="expsensetxt"
->
-  <MenuItem value="" disabled>
-    Select Category
-  </MenuItem>
-  <MenuItem value="food">Food</MenuItem>
-  <MenuItem value="travel">Travel</MenuItem>
-  <MenuItem value="movie">Movie</MenuItem>
-  <MenuItem value="shopping">Shopping</MenuItem>
-  <MenuItem value="entertainment">Entertainment</MenuItem>
-</Select>
-
+            <Select
+              name="category"
+              className="expsensetxt"
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+            >
+              <MenuItem value="" disabled>
+                Category
+              </MenuItem>
+              <MenuItem value="food">
+                <Fastfood className="menuitemIcon" /> Food
+              </MenuItem>
+              <MenuItem value="travel">
+                <Flight className="menuitemIcon" /> Travel
+              </MenuItem>
+              <MenuItem value="movie">
+                <LocalMovies className="menuitemIcon" /> Movie
+              </MenuItem>
+              <MenuItem value="shopping">
+                <ShoppingBasket className="menuitemIcon" /> Shopping
+              </MenuItem>
+              <MenuItem value="entertainment">
+                <ShoppingBasket className="menuitemIcon" /> Entertainment
+              </MenuItem>
+            </Select>
 
             <input
               type="text"

@@ -51,10 +51,6 @@ function Transaction({ expenses, handleDeleteExpense, handleSaveExpense }) {
     return date.toLocaleDateString("en-US", options);
   };
 
-  const capitalizeFirstLetter = (string) => {
-    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
-  };
-
   const handleEditExpense = (expense, index) => {
     setCurrentExpense({ ...expense, index: startIndex + index });
     setOpenEdit(true);
@@ -76,16 +72,16 @@ function Transaction({ expenses, handleDeleteExpense, handleSaveExpense }) {
       <div className="bodycontainer">
         <div className="recentTransaction">
           <h2 className="tratxt">Transactions</h2>
-          {currentExpenses && currentExpenses.length > 0 ? (
+          {expenses.length > 0 ? (
             <div className="transactionrecords">
               {currentExpenses.map((expense, index) => (
                 <div key={index} className="setrecords">
                   <div className="setimg">
-                    {getCategoryIcon(expense.category)}
+                    <p>{getCategoryIcon(expense.category)}</p>
                   </div>
                   <div className="set1">
-                    <h3>{capitalizeFirstLetter(expense.amount)}</h3>
-                    <p>{formatDate(expense.date)}</p>
+                    <div className="amount">{expense.amount}</div>
+                    <div className="date">{formatDate(expense.date)}</div>
                   </div>
                   <div className="set2">
                     <p
@@ -136,7 +132,7 @@ function Transaction({ expenses, handleDeleteExpense, handleSaveExpense }) {
             </div>
           ) : (
             <div className="norecords">
-              <h2>No Transaction Records</h2>
+              <h2 >No Transaction Records</h2>
             </div>
           )}
         </div>
@@ -144,12 +140,12 @@ function Transaction({ expenses, handleDeleteExpense, handleSaveExpense }) {
         <div className="topExpenses">
           <h2 className="norectext">Top Expenses</h2>
           <div className="topdiv">
-            {Object.entries(categoryTotals).length > 0 ? (
+          {Object.entries(categoryTotals).length > 0 ? (
               Object.entries(categoryTotals).map(([category, total]) => (
                 <CategoryBarChart key={category} category={category} amount={total} />
               ))
             ) : (
-              <div className="empty-box">No Expenses Record</div>
+              <div className="empty-box">No Expenses Record</div> 
             )}
           </div>
         </div>
