@@ -99,6 +99,7 @@ function Expensemodal({
           </div>
           <div className="inputrows">
             <Select
+              name="category"
               value={category}
               onChange={(e) => handleCategoryChange(e.target.value)}
               displayEmpty
