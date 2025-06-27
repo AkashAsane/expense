@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./tracker.css";
 import { Expensemodal, Modal } from "./../Components/Allmodals/Modal";
 import { Transaction } from "../Components/Transactionview/Transaction";
-import ExpensePieChart from"../Components/Charts/Piechart"
-import { Margin } from "@mui/icons-material";
+import ExpensePieChart from "../Components/Charts/Piechart";
 
 function Expense() {
   const [balance, setBalance] = useState(5000);
@@ -17,6 +16,13 @@ function Expense() {
   const [expenseCategory, setExpenseCategory] = useState("");
   const [expenseDate, setExpenseDate] = useState("");
 
+  const capitalizeEachWord = (string) => {
+    return string
+      .split(" ")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+      .join(" ");
+  };
+
   const handleDeleteExpense = (index) => {
     const updatedExpenses = [...expenses];
     updatedExpenses.splice(index, 1);
@@ -28,15 +34,13 @@ function Expense() {
       alert("Insufficient balance. Cannot add expense.");
       return;
     }
-  
+
     const newExpense = {
-      amount: expenseAmount,
+      amount: capitalizeEachWord(expenseAmount), 
       price: expensePrice,
       category: expenseCategory,
       date: expenseDate,
     };
-  
-    
 
     const updatedBalance = parseFloat(balance) - parseFloat(expensePrice);
     setBalance(updatedBalance);
@@ -58,7 +62,7 @@ function Expense() {
     const updatedExpenses = expenses.map((expense, index) =>
       index === editedExpense.index
         ? {
-            amount: editedExpense.amount,
+            amount: capitalizeEachWord(editedExpense.amount), 
             price: editedExpense.price,
             category: editedExpense.category,
             date: editedExpense.date,
@@ -129,7 +133,7 @@ function Expense() {
             </div>
 
             <div className="chart">
-              <ExpensePieChart expenses={expenses} className="piechart"  />
+              <ExpensePieChart expenses={expenses} className="piechart" />
             </div>
           </div>
         </div>
