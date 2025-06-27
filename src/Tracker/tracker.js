@@ -2,8 +2,11 @@ import React, { useEffect, useState } from "react";
 import "./tracker.css";
 import { Expensemodal, Modal } from "./../Components/Allmodals/Modal";
 import { Transaction } from "../Components/Transactionview/Transaction";
-import ExpensePieChart from"../Components/Charts/Piechart"
-import { Margin } from "@mui/icons-material";
+import ExpensePieChart from "../Components/Charts/Piechart";
+
+const capitalizeFirstLetter = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+};
 
 function Expense() {
   const [balance, setBalance] = useState(5000);
@@ -28,15 +31,13 @@ function Expense() {
       alert("Insufficient balance. Cannot add expense.");
       return;
     }
-  
+
     const newExpense = {
-      amount: expenseAmount,
+      amount: capitalizeFirstLetter(expenseAmount), // Capitalized
       price: expensePrice,
       category: expenseCategory,
       date: expenseDate,
     };
-  
-    
 
     const updatedBalance = parseFloat(balance) - parseFloat(expensePrice);
     setBalance(updatedBalance);
@@ -58,10 +59,8 @@ function Expense() {
     const updatedExpenses = expenses.map((expense, index) =>
       index === editedExpense.index
         ? {
-            amount: editedExpense.amount,
-            price: editedExpense.price,
-            category: editedExpense.category,
-            date: editedExpense.date,
+            ...editedExpense,
+            amount: capitalizeFirstLetter(editedExpense.amount), // Capitalized
           }
         : expense
     );
@@ -129,7 +128,7 @@ function Expense() {
             </div>
 
             <div className="chart">
-              <ExpensePieChart expenses={expenses} className="piechart"  />
+              <ExpensePieChart expenses={expenses} className="piechart" />
             </div>
           </div>
         </div>
