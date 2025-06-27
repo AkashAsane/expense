@@ -98,22 +98,22 @@ function Expensemodal({
             />
           </div>
           <div className="inputrows">
-            <Select
-              name="category"
-              value={category}
-              onChange={(e) => handleCategoryChange(e.target.value)}
-              displayEmpty
-              className="expsensetxt"
-              required
-            >
-              <MenuItem value="" disabled>
-                Select Category
-              </MenuItem>
-              <MenuItem value="food">Food</MenuItem>
-              <MenuItem value="travel">Travel</MenuItem>
-              <MenuItem value="movie">Movie</MenuItem>
-              <MenuItem value="shopping">Shopping</MenuItem>
-            </Select>
+           <select
+  name="category"
+  value={category}
+  onChange={(e) => handleCategoryChange(e.target.value)}
+  className="expsensetxt"
+  required
+>
+  <option value="" disabled>
+    Select Category
+  </option>
+  <option value="food">Food</option>
+  <option value="travel">Travel</option>
+  <option value="movie">Movie</option>
+  <option value="shopping">Shopping</option>
+</select>
+
 
             <input
               type="date"
