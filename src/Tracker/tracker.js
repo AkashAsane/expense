@@ -10,6 +10,7 @@ function Expense() {
   const [openBalance, setOpenBalance] = useState(false);
   const [openExpense, setOpenExpense] = useState(false);
   const [totalExpense, setTotalExpense] = useState(0);
+  const [dataLoaded, setDataLoaded] = useState(false);
 
   const [expenseAmount, setExpenseAmount] = useState("");
   const [expensePrice, setExpensePrice] = useState("");
@@ -36,7 +37,7 @@ function Expense() {
     }
 
     const newExpense = {
-      amount: capitalizeEachWord(expenseAmount), 
+      amount: capitalizeEachWord(expenseAmount),
       price: expensePrice,
       category: expenseCategory,
       date: expenseDate,
@@ -62,7 +63,7 @@ function Expense() {
     const updatedExpenses = expenses.map((expense, index) =>
       index === editedExpense.index
         ? {
-            amount: capitalizeEachWord(editedExpense.amount), 
+            amount: capitalizeEachWord(editedExpense.amount),
             price: editedExpense.price,
             category: editedExpense.category,
             date: editedExpense.date,
@@ -73,25 +74,35 @@ function Expense() {
   };
 
   useEffect(() => {
-    localStorage.setItem("balance", JSON.stringify(balance));
-    localStorage.setItem("expenses", JSON.stringify(expenses));
-
-    const total = expenses.reduce((acc, expense) => acc + parseFloat(expense.price), 0);
-    setTotalExpense(total);
-  }, [balance, expenses]);
-
-  useEffect(() => {
     const storedBalance = localStorage.getItem("balance");
     const storedExpenses = localStorage.getItem("expenses");
     if (storedBalance) {
       setBalance(JSON.parse(storedBalance));
     }
     if (storedExpenses) {
-      setExpenses(JSON.parse(storedExpenses));
-      const total = JSON.parse(storedExpenses).reduce((acc, expense) => acc + parseFloat(expense.price), 0);
+      const parsedExpenses = JSON.parse(storedExpenses);
+      setExpenses(parsedExpenses);
+      const total = parsedExpenses.reduce(
+        (acc, expense) => acc + parseFloat(expense.price),
+        0
+      );
       setTotalExpense(total);
     }
+    setDataLoaded(true);
   }, []);
+
+  useEffect(() => {
+    if (dataLoaded) {
+      localStorage.setItem("balance", JSON.stringify(balance));
+      localStorage.setItem("expenses", JSON.stringify(expenses));
+
+      const total = expenses.reduce(
+        (acc, expense) => acc + parseFloat(expense.price),
+        0
+      );
+      setTotalExpense(total);
+    }
+  }, [balance, expenses, dataLoaded]);
 
   return (
     <>
@@ -105,18 +116,22 @@ function Expense() {
               <button
                 type="button"
                 className="walletbuttons1"
-                onClick={() => {
-                  setOpenBalance(true);
-                }}
+                onClick={() => setOpenBalance(true)}
               >
                 + Add Income
               </button>
-              {openBalance && <Modal closebalance={setOpenBalance} addBalance={addBalance} />}
+              {openBalance && (
+                <Modal closebalance={setOpenBalance} addBalance={addBalance} />
+              )}
             </div>
 
             <div className="wallet2">
               <h3>Expenses: ₹{totalExpense} </h3>
-              <button type="button" className="walletbutton2" onClick={() => setOpenExpense(true)}>
+              <button
+                type="button"
+                className="walletbutton2"
+                onClick={() => setOpenExpense(true)}
+              >
                 + Add Expense
               </button>
 
